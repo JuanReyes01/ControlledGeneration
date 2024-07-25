@@ -1,2 +1,7 @@
 #Ignore the virtual envirionment
 .venv/
+#Ignore generated data
+cars/
+wine/
+#Ignore Models
+stylegan2/models/
