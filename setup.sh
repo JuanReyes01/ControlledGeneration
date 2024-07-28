@@ -36,6 +36,14 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
+echo "Installing pytorch..."
+python3 -m pip install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https://download.pytorch.org/whl/cu118
+if [ $? -ne 0 ]; then
+  echo "Failed to install pytorch."
+  deactivate
+  exit 1
+fi
+
 echo "Installing gdown..."
 pip install gdown
 if [ $? -ne 0 ]; then
@@ -67,7 +75,6 @@ fi
 # python3 -m pip install requests
 # python3 -m pip install click
 # python3 -m pip install matplotlib
-# python3 -m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 
 # Optionally freeze installed packages to requirements.txt
 # echo "Freezing installed packages to requirements.txt..."

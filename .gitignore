@@ -1,7 +1,12 @@
 #Ignore the virtual envirionment
-.venv/
+.ganvenv/
 #Ignore generated data
 cars/
 wine/
 #Ignore Models
 stylegan2/models/
+
+#Cache
+stylegan2/__pycache__
+stylegan2/dnnlib/__pycache__
+stylegan2/torch_utils/ops/__pycache__
